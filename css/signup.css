@@ -1,0 +1,89 @@
+body{
+    background-color: blueviolet;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.sign-up{
+    width: 400px;
+    height: 630px;
+    margin: auto;
+    background-color: plum;
+    border-radius: 3px;
+}
+.sign-in{
+    width: 380px;
+    height: 340px;
+    margin: auto;
+    border-radius: 3px;
+    background-color: plum;
+
+}
+h1{
+    text-align: center;
+    padding-top: 15px;
+}
+form{
+    width: 300px;
+    margin-left: 18px;
+}
+form label{
+    display: flex;
+    margin-top: 20px;
+    font-size: 18px;
+}
+form input{
+    width: 100%;
+    padding: 7px;
+    border: none;
+    border-color: solid gray;
+    border-radius: 6px;
+    outline: none;
+
+}
+/*input[type="button"]{
+    width: 300px;
+    height: 35px;
+    margin-top: 20px;
+    border: none;
+    background-color: blue;
+    color: aliceblue;
+    font-size: 18px;
+}*/
+p{
+    text-align: center;
+    padding-top: 20px;
+    font-size: 15px;
+}
+.para{
+    text-align: center;
+    color: aliceblue;
+    font-size: 15px;
+    margin-top: -10px;
+}
+.para a{
+    color: aqua;
+}
+#error{
+    color: red;
+}
+form button{
+    width: 300px;
+    height: 35px;
+    margin-top: 20px;
+    border: none;
+    background-color: blue;
+    color: aliceblue;
+    font-size: 18px;
+}
+form button:hover{
+    background-color: gray;
+}
+form button:focus{
+    outline: none;
+    background-color: var(--text-color);
+}
+.incorrect label{
+    border: 2px solid red;
+}
+.incorrect input{
+    border-color: red;
+}
