@@ -1,0 +1,49 @@
+body{
+    background-color: blueviolet;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+h1, h2{
+    font-size: 24px;
+    text-align: center;
+
+}
+/*.contactus{
+    width: 380px;
+    height: 380px;
+    margin: auto;
+    background-color: plum;
+    border-radius: 6px;
+}*/
+form{
+    width: 300px;
+    margin-left: 18px;
+    
+
+}
+form label{
+    display: block;
+    margin-top: 10px;
+    font-size: 18px;
+
+}
+input[type="text"],
+input[type="email"],
+input[type="tel"], textarea, select{
+    width: 150%;
+    padding: 7px;
+    border: none;
+    border-color: solid blue;
+    border-radius: 6px;
+    outline: none;
+}
+input[type="button"]{
+    width: 320px;
+    height: 35px;
+    margin-top: 40px;
+    border: none;
+    background-color: blue;
+    color: aliceblue;
+    font-size: 18px;
+    cursor: pointer;
+}
