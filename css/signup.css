@@ -2,7 +2,7 @@ body{
     background-color: blueviolet;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.sign-up{
+/*.sign-up{
     width: 400px;
     height: 630px;
     margin: auto;
@@ -16,7 +16,7 @@ body{
     border-radius: 3px;
     background-color: plum;
 
-}
+}*/
 h1{
     text-align: center;
     padding-top: 15px;
@@ -39,7 +39,7 @@ form input{
     outline: none;
 
 }
-/*input[type="button"]{
+input[type="button"]{
     width: 300px;
     height: 35px;
     margin-top: 20px;
@@ -47,7 +47,7 @@ form input{
     background-color: blue;
     color: aliceblue;
     font-size: 18px;
-}*/
+}
 p{
     text-align: center;
     padding-top: 20px;
@@ -55,7 +55,7 @@ p{
 }
 .para{
     text-align: center;
-    color: aliceblue;
+    color: black;
     font-size: 15px;
     margin-top: -10px;
 }
