@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web Page</title>
     <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/javascript.js" defer></script>
+
 </head>
 <body>
     <div class="topnav">
@@ -20,16 +22,16 @@
     </div>
 
 </div>
+
 <div class="row">
 <div class="content">
     
         <h1>Sign In</h1>
-        <p id="error-message"></p>
-        <form action="" method="post">
+        <form id="signin-form" method="post">
            <label>Username</label>
-            <input type="text" name="email-input" id="email" placeholder="" required>
+            <input type="text" id="username-input" placeholder="" required>
             <label>Password</label>
-            <input type="text" name="password-input" id="password" placeholder="" required >
+            <input type="text" id="password-input" placeholder="" required >
              <button type="submit">Sign In</button>
         </form>
     
@@ -50,10 +52,10 @@
     <p>Haven’t signed up yet? <a href="signup.html">Create an account here</a>.</p>
 </div>
 </div>
- <div class="footer">
+
+<div class="footer">
     <p>&copy; 2025 DBT. All rights reserved</p>
     <p>Contact us at<a href="dbt123:dbt@yahoo.com"> dbt@yahoo.com</a></p>
 </div>
 </body>
-
-</html> 
+</html>

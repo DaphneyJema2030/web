@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web Page</title>
     <link rel="stylesheet" href="css/style.css">
-    <script type="text/javascript" src="javascript.js" defer></script>
+    <script type="text/javascript" src="js/javascript.js" defer></script>
 
 </head>
 <body>
@@ -22,6 +22,7 @@
     </div>
 
 </div>
+
 <div class="header">
     <h1>Creat Your Account</h1>
 </div>
@@ -30,33 +31,36 @@
     <div class="content">
     
         <h2>Signup</h2>
-        <form action="" method="post">
+        <form id="signup" method="post">
             <label>First Name</label>
-            <input type="text" placeholder="" required>
+            <input type="text" id="firstname-input" placeholder="" required>
             <div class="error"></div>
 
             <label>Last Name</label>
-            <input type="text" placeholder="" required />
+            <input type="text" id="lastname-input" placeholder="" required />
             <div class="error"></div>
 
             <label>Email</label>
-            <input type="email" placeholder="" required />
+            <input type="email" id="email-input" placeholder="" required />
             <div class="error"></div>
 
             <label>Telephone</label>
-            <input type="tel" placeholder="" required />
+            <input type="tel" id="tel-input" placeholder="" required />
+            <div class="error"></div>
 
             <label>Username</label>
-            <input type="text" placeholder="" required />
+            <input type="text" id="username-input" placeholder="" required />
+            <div class="error"></div>
 
             <label>Password</label>
-            <input type="password" placeholder="" required />
+            <input type="password" id="password-input" placeholder="" required />
             <div class="error"></div>
 
             <label>Confirm Password</label>
-            <input type="password" placeholder="" required />
+            <input type="password" id="confirm-password-input" placeholder="" required />
             <div class="error"></div>
 
+            <div id="error-message" class="form-error"></div>
             <button type="submit">Signup</button>
         </form>
 
@@ -82,6 +86,5 @@
     <p>&copy; 2025 DBT. All rights reserved</p>
     <p>Contact us at<a href="dbt123:dbt@yahoo.com"> dbt@yahoo.com</a></p>
 </div>
-
 </body>
 </html>
