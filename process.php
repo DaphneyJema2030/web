@@ -1,5 +1,5 @@
 <?php
-require 'connect.php';
+require 'config/connect.php';
 //check if form is submitted
 if (isset($_POST['send_message'])) {
     //retrive form data
@@ -18,14 +18,23 @@ if (isset($_POST['send_message'])) {
 
 
 //prepare and bind
-$stat = $conn->prepare("INSERT INTO messages(fullname, email, phone, subject, message) VALUES (1, 1, 1, 1, 1)");
-$stat -> bind_param("$$$$$", $allname, $email, $phone, $subject, $message);
+$stmt = $conn->prepare("INSERT INTO messages(fullname, email, phone, subject, message) VALUES (?, ?, ?, ?, ?)");
+$stmt -> bind_param("sssss",$allname, $email, $phone, $subject, $message);
 
 //execute the statement
-if ($stat -> execute()){
-    header("Location: contacts.html?status");
-} 
+if ($stmt -> execute()){
+    header("Location: contacts.html?status=success");
+    exit;
+} else {
+        echo "Error: " . $stmt->error;
+    }
+
+    // Close the statement
+    $stmt->close();
+} else {
+    echo "No data submitted.";
 }
+
 
 if (isset($_POST["signup"])) {
     $firstname = $_POST["firstname"];

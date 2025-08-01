@@ -1,31 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Page</title>
-    <link rel="stylesheet" href="css/style.css">
-    <script type="text/javascript" src="js/javascript.js" defer></script>
-
-</head>
-<body>
-    <div class="topnav">
-    <a href="index.html">Home</a>
-    <a href="aboutme.html">About Me</a>
-    <a href="myproject.html">My Project</a>
-    <a href="myhobbies.html">My Hobbies</a>
-    <a href="contactus.html">Contact Us</a>
-
-    <div class="topnav-right">
-      <a href="signin.html">Sign in</a>
-      <a href="signup.html">Sign up</a>
-    </div>
-
-</div>
-
-<div class="header">
-    <h1>Creat Your Account</h1>
-</div>
+<?php
+    require 'config/connect.php';
+    require 'includes/header.php';
+    require 'includes/nav.php';
+?>
 
 <div class="row">
     <div class="content">
@@ -65,7 +42,7 @@
         </form>
 
     
-      <P class="para">Already have an account? <a href="signin.html">Sign in</a></P>
+      <P class="para">Already have an account? <a href="signin.php">Sign in</a></P>
     </div>
 
 
@@ -82,9 +59,6 @@
   </div>
 </div>
 
-<div class="footer">
-    <p>&copy; 2025 DBT. All rights reserved</p>
-    <p>Contact us at<a href="dbt123:dbt@yahoo.com"> dbt@yahoo.com</a></p>
-</div>
-</body>
-</html>
+<?php
+    require 'includes/footer.php';
+?>
