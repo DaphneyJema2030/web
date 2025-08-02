@@ -95,5 +95,36 @@ if (isset($_POST['signup'])) {
     $stmt->close();
 }
 
+//update user
+if(isset($_POST['update_user'])) {
+    // Retrieve form data
+    $firstname = ucwords(strtolower($_POST['firstname']));
+    $lastname = ucwords(strtolower($_POST['lastname']));
+    $email = strtolower($_POST['email']);
+    $username = strtolower($_POST['username']);
+    $tel = $_POST['tel'];
+    $userId = $_POST['userId'];
+
+    // Validate inputs
+    if(empty($firstname) || empty($lastname) || empty($email) || empty($username) || empty($tel) || empty($userId)) {
+        echo "All fields are required.";
+        exit;
+    }
+
+    // Prepare and bind
+    $stmt = $conn->prepare("UPDATE users SET firstname = ?, lastname = ?, email = ?, username = ?, phone = ? WHERE userId = ?");
+    $stmt->bind_param("ssssssi", $firstname, $lastname, $email, $username, $tel, $userId);
+
+    // Execute the statement
+    if($stmt->execute()) {
+        header("Location: ../persons.php?status=updated");
+        exit;
+    } else {
+        echo "Error: " . $stmt->error;
+    }
+
+    // Close the statement
+    $stmt->close();
+}
     
 ?> 
