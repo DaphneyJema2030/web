@@ -8,37 +8,37 @@
     <div class="content">
     
         <h2>Signup</h2>
-        <form id="signup" method="post">
+        <form action="process.php" method="post">
             <label>First Name</label>
-            <input type="text" id="firstname-input" placeholder="" required>
+            <input type="text" name="firstname" id="firstname-input" placeholder="" required>
             <div class="error"></div>
 
             <label>Last Name</label>
-            <input type="text" id="lastname-input" placeholder="" required />
+            <input type="text" name="lastname" id="lastname-input" placeholder="" required />
             <div class="error"></div>
 
             <label>Email</label>
-            <input type="email" id="email-input" placeholder="" required />
+            <input type="email" name="email" id="email-input" placeholder="" required />
             <div class="error"></div>
 
             <label>Telephone</label>
-            <input type="tel" id="tel-input" placeholder="" required />
+            <input type="tel" name="tel" id="tel-input" placeholder="" required />
             <div class="error"></div>
 
             <label>Username</label>
-            <input type="text" id="username-input" placeholder="" required />
+            <input type="text" name="username" id="username-input" placeholder="" required />
             <div class="error"></div>
 
             <label>Password</label>
-            <input type="password" id="password-input" placeholder="" required />
+            <input type="password" name="password" id="password-input" placeholder="" required />
             <div class="error"></div>
 
             <label>Confirm Password</label>
-            <input type="password" id="confirm-password-input" placeholder="" required />
+            <input type="password" name="confirm_password" id="confirm-password-input" placeholder="" required />
             <div class="error"></div>
 
             <div id="error-message" class="form-error"></div>
-            <button type="submit">Signup</button>
+            <button type="submit" name="signup">Signup</button>
         </form>
 
     

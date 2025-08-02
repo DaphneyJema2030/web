@@ -8,12 +8,12 @@
 <div class="content">
     
         <h1>Sign In</h1>
-        <form id="signin-form" method="post">
+        <form action="process.php" method="post">
            <label>Username</label>
-            <input type="text" id="username-input" placeholder="" required>
+            <input type="text" name="username" id="username-input" placeholder="" required>
             <label>Password</label>
-            <input type="text" id="password-input" placeholder="" required >
-             <button type="submit">Sign In</button>
+            <input type="text" name="password" id="password-input" placeholder="" required >
+             <button type="submit" name="signin">Sign In</button>
         </form>
     
     <P class="para">Dont have an account? <a href="signup.html">Sign Up</a></P>
