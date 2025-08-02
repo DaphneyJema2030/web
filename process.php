@@ -2,10 +2,12 @@
 
 session_start();
 require 'config/connect.php';
+
 //check if form is submitted
 if (isset($_POST['signup'])) {
     //retrive form data
     $firstname = mysqli_real_escape_string($conn, $_POST['firstname']);
+    $lastname = mysqli_real_escape_string($conn, $_POST['lastname']);
     $email = mysqli_real_escape_string($conn, $_POST['email']);
     $tel = mysqli_real_escape_string($conn, $_POST['tel']);
     $username = mysqli_real_escape_string($conn, $_POST['username']);
@@ -17,8 +19,8 @@ if (isset($_POST['signup'])) {
         echo "Passwords do not match.";
         exit;
      }
-
-     $hash_passsword = password_hash($confirm_password, PASSWORD_DEFAULT);
+    //encrypt password
+     $hash_password = password_hash($confirm_password, PASSWORD_DEFAULT);
 
      $user_insert = "INSERT INTO users(firstname, lastname, email, tel, username, password, userType, created) 
      VALUES ('$firstname', '$lastname', '$email', '$tel', '$username', '$hash_password', '$userType', UNIX_TIMESTAMP())";
@@ -54,21 +56,44 @@ if (isset($_POST['signup'])) {
             
         } else {
             unset($_SESSION["control"]);
-            header("Location; ..signin.php");
+            header("Location: ..signin.php");
             exit();
         }
             } else {
-            header("Location; ..signin.php");
+            header("Location: ..signin.php");
             exit;
             }
-
-            //signout
-            if (isset($_POST['signout'])) {
-                unset($_SESSION['control']);
-                header('Location: ../signin.php');
-                exit();
-
         }
+
+        //signout
+        if (isset($_POST['signout'])) {
+            unset($_SESSION['control']);
+            header('Location: ../signin.php');
+            exit();
+        
     }
+
+    //delete a user
+    if(isset($_GET['delete_user'])) {
+
+    $userId = $_GET['delete_user'];
+
+    if(empty($userId)) {
+        echo "User ID is required.";
+        exit;
+    }
+
+    $stmt = $conn->prepare("DELETE FROM users WHERE userId = ?");
+    $stmt->bind_param("i", $userId);
+
+    if($stmt->execute()) {
+        header("Location: ../bookworld.php?status=deleted");
+        exit;
+    } else {
+        echo "Error: " . $stmt->error;
+    }
+    $stmt->close();
+}
+
     
 ?> 
