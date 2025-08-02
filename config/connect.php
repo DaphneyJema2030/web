@@ -1,8 +1,5 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "cuba";
-$dbname = "sect";
+require_once "constants.php";
 //create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 
