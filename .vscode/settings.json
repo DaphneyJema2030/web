@@ -1,0 +1,30 @@
+{
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default",
+                "enableSsl": "Disabled"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3305,
+            "driver": "MariaDB",
+            "username": "root",
+            "name": "Local MariaDB",
+            "database": "sect"
+        },
+        {
+            "mysqlOptions": {
+                "authProtocol": "default",
+                "enableSsl": "Disabled"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3305,
+            "driver": "MariaDB",
+            "name": "db",
+            "database": "sect",
+            "username": "root"
+        }
+    ]
+}
