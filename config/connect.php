@@ -1,4 +1,6 @@
 <?php
+session_start();
+date_default_timezone_set("Africa/Nairobi");
 require_once "constants.php";
 //create connection
 $conn = new mysqli($servername, $username, $password, $dbname);

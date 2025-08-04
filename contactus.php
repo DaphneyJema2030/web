@@ -14,7 +14,7 @@
     <h2>Reach out</h2>
     <form action="" method="post">
            <label>Name</label>
-            <input type="text" placeholder="" required>
+            <input type="text" placeholder="" required autofocus>
             <label>Email</label>
             <input type="text" placeholder="" required>
             <label>Telephone</label>

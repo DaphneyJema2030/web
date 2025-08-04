@@ -10,7 +10,7 @@
         <h2>Signup</h2>
         <form action="process.php" method="post">
             <label>First Name</label>
-            <input type="text" name="firstname" id="firstname-input" placeholder="" required>
+            <input type="text" name="firstname" id="firstname-input" placeholder="" required autofocus />
             <div class="error"></div>
 
             <label>Last Name</label>

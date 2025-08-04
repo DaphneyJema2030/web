@@ -1,7 +1,9 @@
 <?php
 
 session_start();
-require 'config/connect.php';
+require '../config/connect.php';
+require '../includes/fnc.php';
+require '../ pluggins/PHPMailer/sendmail.php';
 
 //check if form is submitted
 if (isset($_POST['signup'])) {
@@ -31,6 +33,8 @@ if (isset($_POST['signup'])) {
      } else {
         die("Failed to insert the new record: . $conn->error");
      }
+
+     SendMail($email,"Welcome to Bookworld", "Hi $firstname, Thank you for signing up");
 }
 
 //signin form
@@ -126,5 +130,7 @@ if(isset($_POST['update_user'])) {
     // Close the statement
     $stmt->close();
 }
+
+
     
 ?> 
